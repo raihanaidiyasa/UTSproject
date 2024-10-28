@@ -1,6 +1,8 @@
 package lat.pam.utsproject
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -29,7 +31,13 @@ class ListFoodActivity : AppCompatActivity() {
             Food("Cappucino", "Kopi cappucino asli yang dibuat dari Kopi Arabica", R.drawable.cappuchino)
         )
 
-        adapter = FoodAdapter(foodList)
+        adapter = FoodAdapter(foodList) { food ->
+            Log.d("ListFoodActivity", "Sending Food Name: ${food.name}")
+            val intent_Order = Intent(this, OrderActivity::class.java)
+            intent.putExtra("foodName", food.name)
+            startActivity(intent_Order)
+
+        }
         recyclerView.adapter = adapter
 
 
