@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         }
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         btnLogin.setOnClickListener {
-            val intent_listFood = Intent(this, ListFoodActivity::class.java)
-            startActivity(intent_listFood)
+            val intent = Intent(this, ListFoodActivity::class.java)
+            startActivity(intent)
         }
     }
 }

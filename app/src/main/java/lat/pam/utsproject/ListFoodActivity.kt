@@ -33,9 +33,9 @@ class ListFoodActivity : AppCompatActivity() {
 
         adapter = FoodAdapter(foodList) { food ->
             Log.d("ListFoodActivity", "Sending Food Name: ${food.name}")
-            val intent_Order = Intent(this, OrderActivity::class.java)
+            val intent = Intent(this, OrderActivity::class.java)
             intent.putExtra("foodName", food.name)
-            startActivity(intent_Order)
+            startActivity(intent)
 
         }
         recyclerView.adapter = adapter

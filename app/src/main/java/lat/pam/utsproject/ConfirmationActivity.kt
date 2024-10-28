@@ -32,8 +32,8 @@ class ConfirmationActivity : AppCompatActivity() {
 
         val btnBackToMenu = findViewById<Button>(R.id.backtoMenu)
         btnBackToMenu.setOnClickListener {
-            val intent_BackToMenu = Intent(this, ListFoodActivity::class.java)
-            startActivity(intent_BackToMenu)
+            val intent = Intent(this, ListFoodActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -35,14 +35,14 @@ class OrderActivity : AppCompatActivity() {
             val orderingName = findViewById<EditText>(R.id.etName).text.toString()
             val additionalNotes = findViewById<EditText>(R.id.etNotes).text.toString()
 
-            val intent_Confirmation = Intent(this, ConfirmationActivity::class.java)
+            val intent = Intent(this, ConfirmationActivity::class.java)
 
             intent.putExtra("foodName", foodName)
             intent.putExtra("servings", servings)
             intent.putExtra("orderingName", orderingName)
             intent.putExtra("additionalNotes", additionalNotes)
 
-            startActivity(intent_Confirmation)
+            startActivity(intent)
         }
     }
 }
